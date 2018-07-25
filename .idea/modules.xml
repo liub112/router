@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/router-core/router-core.iml" filepath="$PROJECT_DIR$/router-core/router-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/router-nosql/nosql-router.iml" filepath="$PROJECT_DIR$/router-nosql/nosql-router.iml" />
+      <module fileurl="file://$PROJECT_DIR$/router-parent/router-parent.iml" filepath="$PROJECT_DIR$/router-parent/router-parent.iml" />
+    </modules>
+  </component>
+</project>
