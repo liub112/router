@@ -3,9 +3,10 @@ package com.al.crm.router.core;
 public class RouteContext {
 	private static final ThreadLocal<String> contextHolder=new ThreadLocal<String>();	
 	private static final ThreadLocal<String> routeIdHolder=new ThreadLocal<String>();
-	
-	public final static String CONST_ROUTE_KEY_AREA = "areaId";
-	public final static String CONST_ROUTE_KEY_DISTRIBUTOR = "distributorId";
+	/**
+	 * 路由标识前缀
+	 */
+	public final static String CONST_ROUTE_KEY_PREFIX = "areaId";
 
 	/**
 	 * Gets the value of routeId

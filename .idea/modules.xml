@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/router-core/router-core.iml" filepath="$PROJECT_DIR$/router-core/router-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/router-database/router-database.iml" filepath="$PROJECT_DIR$/router-database/router-database.iml" />
       <module fileurl="file://$PROJECT_DIR$/router-nosql/nosql-router.iml" filepath="$PROJECT_DIR$/router-nosql/nosql-router.iml" />
       <module fileurl="file://$PROJECT_DIR$/router-parent/router-parent.iml" filepath="$PROJECT_DIR$/router-parent/router-parent.iml" />
     </modules>

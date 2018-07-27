@@ -4,6 +4,7 @@ import com.al.crm.router.core.strategy.IRouteStrategy;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.util.Assert;
 
+import java.util.HashMap;
 import java.util.Map;
 
 public abstract class AbstractClientRouter<T> implements ClientRouter<T>, InitializingBean {
@@ -18,10 +19,13 @@ public abstract class AbstractClientRouter<T> implements ClientRouter<T>, Initia
      * 路由策略
      */
     private IRouteStrategy routeStrategy;
+    /**
+     * 客户端集合
+     */
+    private Map<String,Object> targetClientInstanceBeans;
 
-
-    public void setResloveClientInstanceBeans(Map<String, T> resloveClientInstanceBeans) {
-        this.resloveClientInstanceBeans = resloveClientInstanceBeans;
+    public void setTargetClientInstanceBeans(Map<String, Object> targetClientInstanceBeans) {
+        this.targetClientInstanceBeans = targetClientInstanceBeans;
     }
 
     public void setStrategy(Class<IRouteStrategy> strategy) {
@@ -61,12 +65,23 @@ public abstract class AbstractClientRouter<T> implements ClientRouter<T>, Initia
      */
     @Override
     public void afterPropertiesSet() throws Exception {
+        if(this.targetClientInstanceBeans == null){
+            throw  new IllegalArgumentException("Property 'targetClientInstanceBeans' is required");
+        }
+
         if(this.routeStrategy == null){
             throw  new IllegalArgumentException("Property 'routeStrategy' is required");
         }
-        if(this.resloveClientInstanceBeans == null){
-            throw  new IllegalArgumentException("Property 'resloveClientInstanceBeans' is required");
+
+        this.resloveClientInstanceBeans = new HashMap<String,T>(targetClientInstanceBeans.size());
+        for (Map.Entry<String,Object> entry: this.targetClientInstanceBeans.entrySet()) {
+            String lookupKey = entry.getKey();
+            Object o = entry.getValue();
+            T source = resolveSpecifiedClient(o);
+            resloveClientInstanceBeans.put(lookupKey,source);
         }
     }
+
+    protected abstract T resolveSpecifiedClient(Object o);
 
 }

@@ -77,7 +77,7 @@
                 <!--<entry key="rds03" value-ref="cl03" />-->
 			</map>
 		</property>
-		<property name="strategy" value="com.al.crm.router.core.strategy.DefaultRouteStrategy"/>
+		<property name="strategy" value="com.al.crm.router.core.strategy.DefaultRegionRouteStrategy"/>
 	</bean>
 
 </beans>

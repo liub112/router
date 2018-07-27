@@ -6,6 +6,7 @@
         <option value="$PROJECT_DIR$/router-parent/pom.xml" />
         <option value="$PROJECT_DIR$/router-nosql/pom.xml" />
         <option value="$PROJECT_DIR$/router-core/pom.xml" />
+        <option value="$PROJECT_DIR$/router-database/pom.xml" />
       </list>
     </option>
   </component>

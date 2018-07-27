@@ -6,7 +6,7 @@ package com.al.crm.router.core.strategy;
 public interface IRouteStrategy {
     /**
      * 确定当前使用连接客户端实例名称
-     * @return redis源名称
+     * @return routeKey
      */
     String determineCurrentRouteName();
 }

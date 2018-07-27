@@ -29,7 +29,7 @@ public class CacheRouteInvocationHanlderJunitTest extends BaseJunitTest {
         map.put("areaId_832","rds01");
         map.put("areaId_844","rds02");
         map.put("areaId_845","rds02");
-        MDA.CACHE_ROUTE_MAPPING.put("CRM2013",map);
+        MDA.REGION_ROUTE_MAP.put("CRM2013",map);
         RouteContext.setRouteId("8320100");
         System.out.println(provCluster.set("aaaaa","bbbb1"));
         System.out.println(provCluster.get("aaaaa"));

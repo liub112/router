@@ -4,13 +4,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.al.crm</groupId>
+        <groupId>com.al.crm.router</groupId>
         <artifactId>router-parent</artifactId>
         <version>1.0-SNAPSHOT</version>
         <relativePath>../router-parent/pom.xml</relativePath>
     </parent>
-    <groupId>com.al.crm</groupId>
-    <artifactId>nosql-router</artifactId>
+    <groupId>com.al.crm.router</groupId>
+    <artifactId>router-nosql</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -18,7 +18,7 @@
     </properties>
     <dependencies>
         <dependency>
-            <groupId>com.al.crm</groupId>
+            <groupId>com.al.crm.router</groupId>
             <artifactId>router-core</artifactId>
             <version>1.0-SNAPSHOT</version>
             <scope>compile</scope>

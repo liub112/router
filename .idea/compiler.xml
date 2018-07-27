@@ -8,12 +8,14 @@
         <outputRelativeToContentRoot value="true" />
         <module name="nosql-router" />
         <module name="router-core" />
+        <module name="router-database" />
         <module name="router-nosql" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="nosql-router" target="1.6" />
       <module name="router-core" target="1.6" />
+      <module name="router-database" target="1.6" />
       <module name="router-nosql" target="1.6" />
       <module name="router-parent" target="1.6" />
     </bytecodeTargetLevel>
