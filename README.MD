@@ -2,13 +2,10 @@
 ###主要处理动态client路由问题,类结构图如下：
      ![Image text](ClientRouter.png)
 #路由器工程结构：
-  router-parent :父工程
-   |
-   router-core : 基础包
-        |
-        router-nosql ：nosql路由选择器
-        |
-        router-database ：database路由选择器
+>* router-parent :父工程
+>> router-core : 基础包
+>>>router-nosql ：nosql路由选择器  
+>>>router-database ：database路由选择器
         
 #router-nosql spring配置：
      <bean id="cl01" class="com.al.crm.router.nosql.extend.RedisClusterCache">
