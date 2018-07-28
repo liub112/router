@@ -44,8 +44,8 @@ public abstract class AbstractClientRouter<T> implements ClientRouter<T>, Initia
         String name;
         try{
             name= routeStrategy.determineCurrentRouteName();
-            Assert.notNull(name,"请指定当前路由的redis数据源名称");
-            if(!this.resloveClientInstanceBeans.containsKey(name))throw new IllegalArgumentException("redis数据源："+name+" 不存在");
+            Assert.notNull(name,"请指定当前路由名称");
+            if(!this.resloveClientInstanceBeans.containsKey(name))throw new IllegalArgumentException("clientSource："+name+" is not exist!");
             RouteContext.setName(name);
             return this.resloveClientInstanceBeans.get(name);
         }finally{
