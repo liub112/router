@@ -19,7 +19,9 @@ public class SpringDataSourceRouter extends AbstractRoutingDataSource{
      * {@link #resolveSpecifiedLookupKey} method.
      */
     public void setStrategy(Class<IRouteStrategy> strategy) {
-        if(!IRouteStrategy.class.isAssignableFrom(strategy))throw new IllegalArgumentException("指定的路由策略实现类："+ strategy.getName()+" 不正确，原因：必须实现接口：com.al.crm.redis.route.IRouteStrategy");
+        if(!IRouteStrategy.class.isAssignableFrom(strategy))
+            throw new IllegalArgumentException("指定的路由策略实现类："+ strategy.getName()
+                    +" 不正确，原因：必须实现接口：com.al.crm.redis.route.IRouteStrategy");
         try{
             this.routeStrategy = strategy.newInstance();
         }catch(IllegalAccessException e){
