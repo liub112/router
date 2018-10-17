@@ -14,7 +14,7 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <fastxml.ackson.version>2.8.9</fastxml.ackson.version>
+        <fastxml.ackson.version>2.8.11.1</fastxml.ackson.version>
     </properties>
     <dependencies>
         <dependency>
